@@ -12,18 +12,20 @@ body {
     font-size: 16px;
 }
 
-.wrap {
-    margin: auto;
-    max-width: 800px;
-    width: 90%;
-}
-
 .main {
     background: #F44336;
     border-top: 20px solid #D32F2F;
     color: #fff;
     padding: 50px 0;
-    width: 100%
+    width: 55%;
+    margin: 50px auto 10px; /* Distance from top, auto aligns to the center, distance from the bottom to next item*/ 
+    text-align: center;
+}
+
+.wrap {
+    margin: auto;
+    max-width: 800px;
+    width: 90%;
 }
 
 .main .taskInput {
@@ -49,6 +51,7 @@ body {
     display: inline-block;
     font-size: 16px;
     padding: 15px;
+    border-radius: 10%;
 }
 
 .main .taskInput .button-add:hover{
@@ -57,6 +60,7 @@ body {
 
 .tasks .list {
     list-style: none;
+    text-align: center;
 }
 
 .tasks .list li {

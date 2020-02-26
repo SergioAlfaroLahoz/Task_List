@@ -25,9 +25,14 @@
         textInput.value = ""; //Clean text input
 
         for(var i=0; i<list.children.length;i++){
-            list.children[i].addEventListener("click", function(){
-                this.parentNode.removeChild(this);
-            });
+            list.children[i].addEventListener("click", deleteTask);
+        }
+    };
+
+    var addTaskEnter = function(e){
+        if(e.key === "Enter"){
+            e.preventDefault();
+            addTask();
         }
     };
 
@@ -43,7 +48,8 @@
     //Events
     button.addEventListener("click", addTask);
     textInput.addEventListener("click", checkInput);
+    textInput.addEventListener("keyup", addTaskEnter);
     for(var i=0; i<list.children.length;i++){
         list.children[i].addEventListener("click", deleteTask);
-    }
+    };
 }());
