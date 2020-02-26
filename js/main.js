@@ -27,6 +27,8 @@
         for(var i=0; i<list.children.length;i++){
             list.children[i].addEventListener("click", deleteTask);
         }
+
+        textInput.focus();
     };
 
     var addTaskEnter = function(e){
@@ -48,8 +50,8 @@
     //Events
     button.addEventListener("click", addTask);
     textInput.addEventListener("click", checkInput);
-    textInput.addEventListener("keyup", addTaskEnter);
+    textInput.addEventListener("keydown", addTaskEnter);
     for(var i=0; i<list.children.length;i++){
         list.children[i].addEventListener("click", deleteTask);
-    };
+    }
 }());
